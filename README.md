@@ -1,2 +1,2 @@
 # jaredpetersen.github.io
-GitHub Pages
+GitHub Pages; Used to host repository screenshots
