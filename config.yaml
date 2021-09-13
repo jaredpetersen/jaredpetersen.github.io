@@ -1,0 +1,9 @@
+baseURL: 'https://jaredpetersen.github.io'
+languageCode: 'en-us'
+title: 'Jared Petersen'
+theme: jaredpetersen
+
+params:
+  description: Personal website and blog for Jared Petersen covering a range of software engineering topics
+
+  googleAnalytics: "TODO"
