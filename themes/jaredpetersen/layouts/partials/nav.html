@@ -1,0 +1,12 @@
+<nav class="navbar">
+    <div class="brand"><a href="/" rel="noreferrer" title="Home" aria-label="Home">{{ .Site.Title }}</a></div>
+    {{ with .Site.Params.social }}
+    <div class="social">
+        {{ range . }}
+        <a href="{{ .url | safeURL }}" target="_blank" rel="noreferrer" title="{{ .type }}" aria-label="{{ .type }}">
+            <img src="/images/social/{{ (.type | lower) }}.svg" />
+        </a>
+        {{ end }}
+    </div>
+    {{ end }}
+</nav>

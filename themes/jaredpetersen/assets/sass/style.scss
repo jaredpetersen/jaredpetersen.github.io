@@ -1,0 +1,70 @@
+:root {
+    --font-family-heading: 'Poppins', sans-serif;
+    --font-family-paragraph: 'Poppins', sans-serif;
+    --font-family-mono: Menlo, Monaco, Consolas, "Courier New", monospace;
+    --base-color: #d2dade;
+    --base-offset-color: #eaeaea;
+    --highlight-color: #6affda;
+    --heading-color: #1c1b1d;
+    --text-color: #313b44;
+    --max-width: 800px;
+}
+
+:root {
+    --color-mode: light;
+    --h1-color: #343a40;
+    --font-color: #495057;
+    --heading-color: #343a40;
+    --background: white;
+    --dark-font-color: #1b1d25;
+    --medium-font-color: #60656c;
+    --light-font-color: #858b93;
+    --light-background: #f1f4f8;
+    --light-background-hover: #e1e6ed;
+    --border: #d6d9de;
+    --link-color: #5183f5;
+    --link-color-darker: #364fc7;
+    --navbar-color: #1b1d25;
+    --blockquote: #f9f9f9;
+    --blockquote-left: #e3e6eb;
+    --transparent-text: rgba(0, 0, 0, 0.7);
+    --transparent-bg: rgba(0, 0, 0, 0.05);
+    --light-transparent-bg: rgba(255, 255, 255, 0.1);
+}
+
+$breakpoints: (
+  'xsmall': 600px,
+  'small': 767px,
+  'medium': 992px,
+  'large': 1200px,
+);
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@import "base/grid";
+@import 'base/breakpoint';
+@import 'base/text';
+@import "components/main";
+@import 'components/nav';
+@import 'components/intro';
+
+html, body {
+    box-sizing: border-box;
+    font-family: var(--font-family-paragraph);
+    font-weight: 500;
+}
+
+body {
+    background: var(--base-color);
+    font-family: var(--font-family-paragraph);
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0;
+    padding: 30px;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
