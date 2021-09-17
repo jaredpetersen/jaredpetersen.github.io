@@ -26,6 +26,12 @@
         }
     }
 
+    // @media print {
+    //     .brand {
+    //         font-size: 48px;
+    //     }
+    // }
+
     .social {
         flex: 1 100%;
         flex-wrap: wrap;
@@ -55,6 +61,12 @@
             flex-wrap: nowrap;
             justify-content: flex-end;
             align-items: center;
+        }
+    }
+
+    @media print {
+        .social {
+            display: none;
         }
     }
 }
