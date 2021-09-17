@@ -22,3 +22,6 @@ params:
     url: mailto:jaredtoddpetersen@gmail.com
 
   googleAnalytics: "TODO"
+
+permalinks:
+  posts: /blog/:year/:month/:slug

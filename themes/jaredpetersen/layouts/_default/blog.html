@@ -1,7 +1,23 @@
 {{ define "main"}}
-<input id="search-query" type="search" placeholder="Search for anything...">
+{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 
-<div>
-
-</div>
+<section id="articles-list">
+    {{ range $pages.GroupByDate "2006" }}
+    <section>
+        <h2>{{ .Key }}</h2>
+        <div class="posts">
+            {{ range .Pages }}
+            <div class="post">
+                <a href="{{ .RelPermalink }}">
+                    <div class="post-row">
+                        <time>{{ .Date.Format "Jan 02" }}</time>
+                        <h3>{{ .Title }}</h3>
+                    </div>
+                </a>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+</section>
 {{ end }}

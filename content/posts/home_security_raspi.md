@@ -1,7 +1,8 @@
 ---
-title: "How to Set up a Home Security Live Streaming Camera with Raspberry Pi"
-date: 2021-09-13T17:28:09Z
-description: "Tutorial for how to set up a home security system using the Raspberry Pi, Raspberry Pi camera module, and raspilive"
+title: How to Set up a Home Security Live Streaming Camera with Raspberry Pi
+slug: home-security-system-raspberry-pi
+date: 2018-08-16T00:00:00Z
+description: Tutorial for how to set up a home security system using the Raspberry Pi, Raspberry Pi camera module, and raspilive
 ---
 
 # How to Set up a Home Security Live Streaming Camera with Raspberry Pi
@@ -12,8 +13,6 @@ All they needed to do was sit around and serve live video footage with a 24 hour
 I was already going the DIY route so I thought it would be fun to write my own.
 
 Two years later and I’ve finally gotten around to it...
-
----
 
 ## raspi-live
 raspi-live is a Node.js command-line interface that serves live video from the Raspberry Pi Camera Module over the web via HLS or DASH — you choose.
