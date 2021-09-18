@@ -31,9 +31,10 @@ $breakpoints: (
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-@import "base/grid";
+@import 'base/grid';
 @import 'base/breakpoint';
 @import 'base/text';
+@import 'base/syntax';
 @import "components/main";
 @import 'components/nav';
 @import 'components/intro';

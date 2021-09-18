@@ -128,3 +128,22 @@ code {
         font-size: 1.5rem;
     }
 }
+
+// Add a gutter after each code block so that everything isn't smooshed together
+.highlight {
+    margin-bottom: 1.3rem;
+}
+
+.highlight:last-child {
+    margin-bottom: auto
+}
+
+// Get rid of line numbers for print
+@media print {
+    pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+}
+
+// See syntax.scss for code syntax highlighting colors

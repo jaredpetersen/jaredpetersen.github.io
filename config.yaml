@@ -23,5 +23,12 @@ params:
 
   googleAnalytics: "TODO"
 
+markup:
+  highlight:
+    guessSyntax: true
+    lineNos: true
+    noClasses: false
+    lineNumbersInTable: false
+
 permalinks:
   posts: /blog/:year/:month/:slug
