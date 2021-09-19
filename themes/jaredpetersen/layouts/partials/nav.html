@@ -4,9 +4,6 @@
         <a href="/blog" rel="noreferrer" title="Blog" aria-label="Blog">
             <img src="/images/icons/file.svg" />
         </a>
-        <a href="/projects" rel="noreferrer" title="Projects" aria-label="Projects">
-            <img src="/images/icons/archive.svg" />
-        </a>
         {{ with .Site.Params.social }}
         {{ range . }}
         <a href="{{ .url | safeURL }}" target="_blank" rel="noreferrer" title="{{ .type }}" aria-label="{{ .type }}">

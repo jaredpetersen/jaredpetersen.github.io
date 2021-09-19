@@ -1,6 +1,7 @@
 {{ define "main"}}
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 
+<h1>Blog</h1>
 <section class="blog-post-list">
     {{ range $pages.GroupByDate "2006" }}
     <section class="posts-year">

@@ -4,7 +4,6 @@ date: 2020-11-11T00:00:00Z
 description: "Tutorial for connecting Redis to Kafka with kafka connect redis"
 ---
 
-# Sinking and Sourcing Redis Data With Kafka Connect Redis
 [jaredpetersen/kafka-connect-redis](https://github.com/jaredpetersen/kafka-connect-redis) is a new open source, MIT-licensed Kafka Connect plugin that can integrate Redis into your Kafka data pipelines.
 
 Need data from Redis streamed to another application in realtime via Kafka? You’re covered with the source connector, enabling you to create records based on [pub/sub messages](https://redis.io/topics/pubsub) or [keyspace notifications](https://redis.io/topics/notifications).
