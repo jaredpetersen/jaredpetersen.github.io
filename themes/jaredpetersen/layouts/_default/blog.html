@@ -2,7 +2,6 @@
 {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 
 <h1>Blog</h1>
-<p>Subscribe with <a href="/index.xml" target="_">RSS</a></p>
 <section class="blog-post-list">
     {{ range $pages.GroupByDate "2006" }}
     <section class="posts-year">
