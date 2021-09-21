@@ -2,12 +2,12 @@
     <div class="brand"><a href="/" rel="noreferrer" title="Home" aria-label="Home">{{ .Site.Title }}</a></div>
     <div class="social">
         <a href="/blog" rel="noreferrer" title="Blog" aria-label="Blog">
-            <img src="/images/icons/file.svg" />
+            {{ partial "svg/social/file.svg" }}
         </a>
         {{ with .Site.Params.social }}
         {{ range . }}
         <a href="{{ .url | safeURL }}" target="_blank" rel="noreferrer" title="{{ .type }}" aria-label="{{ .type }}">
-            <img src="/images/icons/{{ (.type | lower) }}.svg" />
+            {{ partial (print "svg/social/" (.type | lower) ".svg") }}
         </a>
         {{ end }}
         {{ end }}

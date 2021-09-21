@@ -30,6 +30,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non facilisis erat
 
 This is a paragraph with a `code block` in it.
 
+> This is a blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non facilisis erat. Pellentesque tempor nisi ac lectus pellentesque maximus. Fusce dui lacus, cursus in velit vel, pharetra porta velit. Morbi sed congue est. Curabitur in molestie leo. Morbi viverra felis quis sagittis condimentum. Quisque in enim consequat, luctus lectus eu, ultrices metus. Maecenas bibendum orci id ante fringilla, sit amet finibus nisl ullamcorper.
+
+> Another line for the blockquote
+
 ```
 console.log('Hello world');
 ```
