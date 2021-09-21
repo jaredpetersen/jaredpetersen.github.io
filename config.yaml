@@ -22,7 +22,7 @@ params:
   - type: Email
     url: mailto:jaredtoddpetersen@gmail.com
 
-  googleAnalytics: "TODO"
+googleAnalytics: G-8B0VL7E1R0
 
 markup:
   highlight:
