@@ -1,5 +1,5 @@
-baseURL: 'https://jaredpetersen.github.io'
-languageCode: 'en-us'
+baseURL: https://jaredpetersen.github.io
+languageCode: en-us
 title: Jared Petersen
 theme: jaredpetersen
 copyright: 2021 Jared Petersen. All rights reserved.
@@ -9,18 +9,18 @@ params:
   emoji: 🚜
 
   social:
-  - type: GitHub
-    url: https://github.com/jaredpetersen
-  - type: StackOverflow
-    url: https://stackoverflow.com/users/7583677/jared-petersen
-  - type: LinkedIn
-    url: https://www.linkedin.com/in/petersenjared
-  - type: Instagram
-    url: https://instagram.com/jaredtpetersen
-  - type: Twitter
-    url: https://twitter.com/jaredtpetersen
-  - type: Email
-    url: mailto:jaredtoddpetersen@gmail.com
+    - type: GitHub
+      url: https://github.com/jaredpetersen
+    - type: StackOverflow
+      url: https://stackoverflow.com/users/7583677/jared-petersen
+    - type: LinkedIn
+      url: https://www.linkedin.com/in/petersenjared
+    - type: Instagram
+      url: https://instagram.com/jaredtpetersen
+    - type: Twitter
+      url: https://twitter.com/jaredtpetersen
+    - type: Email
+      url: mailto:jaredtoddpetersen@gmail.com
 
 googleAnalytics: G-8B0VL7E1R0
 
@@ -35,4 +35,4 @@ disableKinds:
   - RSS
 
 permalinks:
-  posts: /blog/:year/:month/:slug
+  blog: /blog/:year/:month/:slug/
