@@ -5,7 +5,7 @@ description: Tutorial for how to set up a home security system using the Raspber
 date: 2018-08-16T00:00:00-07:00
 ---
 
-![Raspberry Pi Camera connected to the Raspberry Pi Camera Module V2](/img/home-security-raspicam/raspberry-pi-cam.jpeg 'Image courtesy of the Raspberry Pi Foundation')
+![Raspberry Pi Camera connected to the Raspberry Pi Camera Module V2](/img/home-security-raspicam/raspberry-pi-camera.jpeg 'Image courtesy of the Raspberry Pi Foundation, CC BY-SA 4.0, via Wikimedia Commons')
 
 **UPDATE: This project has been rebranded to "raspilive" and has been completely rewritten in GO. The functionality discussed here still exists but the commands have been adjusted. For updated information, please see the [project page](https://github.com/jaredpetersen/raspilive).**
 
