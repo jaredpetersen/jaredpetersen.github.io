@@ -1,5 +1,7 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
 <h5>{{ .Date.Format "Jan 02, 2006" }} | {{ .ReadingTime }} min read</h5>
-{{ .Content }}
+<section class="single">
+    {{ .Content }}
+</section>
 {{ end }}

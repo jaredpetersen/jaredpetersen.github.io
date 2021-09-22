@@ -1,5 +1,5 @@
 // Monokai
-/* Background */ .chroma { color: #f8f8f2; background-color: var(--code-base-color); padding-top: 10px; padding-bottom: 10px; padding-right: 10px; border-radius: 5px; overflow: scroll }
+/* Background */ .chroma { color-scheme: dark; color: #f8f8f2; background-color: var(--code-base-color); padding-top: 10px; padding-bottom: 10px; padding-right: 10px; overflow: auto; }
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err { color: #960050; background-color: #1e0010 }
 /* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
