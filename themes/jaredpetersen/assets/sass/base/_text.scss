@@ -110,6 +110,12 @@ a {
 
 p {
     font-size: 1.3rem;
+    margin-bottom: 2rem;
+
+    code {
+        background-color: var(--code-single-base-color);
+        padding: 2px;
+    }
 }
 
 p.subtitle {
@@ -131,7 +137,7 @@ code {
 
 // Add a gutter after each code block so that everything isn't smooshed together
 .highlight {
-    margin-bottom: 1.3rem;
+    margin-bottom: 2rem;
 }
 
 .highlight:last-child {

@@ -1,8 +1,11 @@
 ---
 title: Sinking and Sourcing Redis Data With Kafka Connect Redis
-date: 2020-11-11T00:00:00Z
-description: "Tutorial for connecting Redis to Kafka with kafka connect redis"
+slug: kafka-connect-redis-intro
+description: Tutorial for connecting Redis to Kafka with Kafka Connect Redis
+date: 2020-11-11T00:00:00-07:00
 ---
+
+![Screenshot of the Kafka Connect Redis repository](/img/kafka-connect-redis-intro/repository-screenshot.png)
 
 [jaredpetersen/kafka-connect-redis](https://github.com/jaredpetersen/kafka-connect-redis) is a new open source, MIT-licensed Kafka Connect plugin that can integrate Redis into your Kafka data pipelines.
 
@@ -157,4 +160,96 @@ GEOPOS Sicily Catania
 Congratulations! You just successfully used [jaredpetersen/kafka-connect-redis](https://github.com/jaredpetersen/kafka-connect-redis) to sink data into Redis via Kafka Connect!
 
 ## Source Connector
-TODO
+We can also use [jaredpetersen/kafka-connect-redis](https://github.com/jaredpetersen/kafka-connect-redis) to subscribe to Redis pub/sub messages and produce Kafka records. This is super useful particularly when it comes to using [keyspace notifications](https://redis.io/topics/notifications), which use Redis’ pub/sub mechanism to communicate what’s going on inside Redis in realtime. Source functionality is unique to [jaredpetersen/kafka-connect-redis](https://github.com/jaredpetersen/kafka-connect-redis) and is not supported by other connectors.
+
+Let’s set up the source connector to subscribe to all the keyspace notifications that Redis has to offer and produce Kafka records.
+
+Send a POST request to the Kafka Connect REST API to create a new source connector. We’re going to use Connect JSON here again for the sake of simplicity but Avro is also supported and the steps to use it are documented in the repository.
+
+```sh
+curl --request POST \
+    --url "$(minikube -n kcr-demo service kafka-connect --url)/connectors" \
+    --header 'content-type: application/json' \
+    --data '{
+        "name": "demo-redis-source-connector",
+        "config": {
+            "connector.class": "io.github.jaredpetersen.kafkaconnectredis.source.RedisSourceConnector",
+            "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+            "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+            "tasks.max": "1",
+            "topic": "redis.events",
+            "redis.uri": "redis://IEPfIr0eLF7UsfwrIlzy80yUaBG258j9@redis-cluster",
+            "redis.cluster.enabled": true,
+            "redis.channels": "__key*__:*",
+            "redis.channels.pattern.enabled": true
+        }
+    }'
+```
+
+Create an interactive, ephemeral Kubernetes pod with redis-client installed:
+
+```sh
+kubectl -n kcr-demo run -it --rm redis-client --image redis:6 -- /bin/bash
+```
+
+Use `redis-cli` in the pod to connect to the Redis cluster:
+
+```sh
+redis-cli -c -u 'redis://IEPfIr0eLF7UsfwrIlzy80yUaBG258j9@redis-cluster'
+```
+
+Run Redis commands to create some different keyspace notification events:
+
+```
+SET {user.1}.username jetpackmelon22 EX 2
+SET {user.2}.username anchorgoat74 EX 2
+SADD {user.1}.interests reading
+EXPIRE {user.1}.interests 2
+SADD {user.2}.interests sailing woodworking programming
+EXPIRE {user.2}.interests 2
+GET {user.1}.username
+GET {user.2}.username
+SMEMBERS {user.1}.interests
+SMEMBERS {user.2}.interests
+```
+
+In another terminal, create an interactive, ephemeral Kubernetes pod to tail the Kafka topic that the connector is producing records to:
+
+```sh
+kubectl -n kcr-demo run -it --rm kafka-tail-records --image confluentinc/cp-kafka:6.0.0 --command /bin/bash
+```
+
+Run the following command to tail the topic from the beginning:
+
+```sh
+kafka-console-consumer \
+    --bootstrap-server kafka-broker-0.kafka-broker:9092 \
+    --property print.key=true \
+    --property key.separator='|' \
+    --topic redis.events \
+    --from-beginning
+```
+
+Give it a few seconds to catch up to the records that have already been written.
+
+Switch back and forth between your `redis-cli` pod and your `kafka-console-consumer` pod to observe how interactions with Redis produce Kafka records.
+
+## Cleanup
+All good things must eventually come to an end.
+
+If you want to keep using the minikube instance that you set up but want to remove all of the Kafka and Redis stuff that we installed inside it for this demo, run the following command:
+
+```sh
+kubectl delete -k kubernetes
+```
+
+If you’re done with minikube entirely, just delete it:
+
+```sh
+minikube delete
+```
+
+## Closing Remarks
+I hope that you had a great time playing with [jaredpetersen/kafka-connect-redis](https://github.com/jaredpetersen/kafka-connect-redis). It’s available now on [Maven Central](https://search.maven.org/search?q=g:io.github.jaredpetersen%20AND%20a:kafka-connect-redis), [Confluent Hub](https://www.confluent.io/hub/jaredpetersen/kafka-connect-redis), or you can download it directly from GitHub via the [Releases](https://github.com/jaredpetersen/kafka-connect-redis/releases) page. There’s more work to be done so stay tuned!
+
+If this connector brings any sort of value to your life, please consider starring the repository, sponsoring the project, or just [tweet at me](https://twitter.com/jaredtpetersen).
