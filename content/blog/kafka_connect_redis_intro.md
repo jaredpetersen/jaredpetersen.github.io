@@ -2,6 +2,8 @@
 title: Sinking and Sourcing Redis Data With Kafka Connect Redis
 slug: kafka-connect-redis-intro
 description: Tutorial for connecting Redis to Kafka with Kafka Connect Redis
+images:
+    - /img/kafka-connect-redis-intro/repository-screenshot.png
 date: 2020-11-11T00:00:00-07:00
 ---
 

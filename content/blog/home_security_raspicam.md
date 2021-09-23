@@ -2,6 +2,8 @@
 title: How to Set up a Home Security Live Streaming Camera with Raspberry Pi
 slug: home-security-raspicam
 description: Tutorial for how to set up a home security system using the Raspberry Pi, Raspberry Pi camera module, and raspilive
+images:
+    - /img/home-security-raspicam/raspberry-pi-camera.jpeg
 date: 2018-08-16T00:00:00-07:00
 ---
 

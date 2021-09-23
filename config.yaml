@@ -5,34 +5,37 @@ theme: jaredpetersen
 copyright: 2021 Jared Petersen. All rights reserved.
 
 params:
-  description: Personal website and blog for Jared Petersen covering a range of software engineering topics
-  emoji: 🚜
+    description: Personal website and blog for Jared Petersen covering a range of software engineering topics
+    emoji: 🚜
 
-  social:
-    - type: GitHub
-      url: https://github.com/jaredpetersen
-    - type: StackOverflow
-      url: https://stackoverflow.com/users/7583677/jared-petersen
-    - type: LinkedIn
-      url: https://www.linkedin.com/in/petersenjared
-    - type: Instagram
-      url: https://instagram.com/jaredtpetersen
-    - type: Twitter
-      url: https://twitter.com/jaredtpetersen
-    - type: Email
-      url: mailto:jaredtoddpetersen@gmail.com
+    images:
+        - img/profile.png
 
-googleAnalytics: G-8B0VL7E1R0
+    social:
+        - type: GitHub
+          url: https://github.com/jaredpetersen
+        - type: StackOverflow
+          url: https://stackoverflow.com/users/7583677/jared-petersen
+        - type: LinkedIn
+          url: https://www.linkedin.com/in/petersenjared
+        - type: Instagram
+          url: https://instagram.com/jaredtpetersen
+        - type: Twitter
+          url: https://twitter.com/jaredtpetersen
+        - type: Email
+          url: mailto:jaredtoddpetersen@gmail.com
+
+    googleAnalytics: G-8B0VL7E1R0
 
 markup:
-  highlight:
-    guessSyntax: true
-    lineNos: true
-    noClasses: false
-    lineNumbersInTable: false
+    highlight:
+        guessSyntax: true
+        lineNos: true
+        noClasses: false
+        lineNumbersInTable: false
 
 disableKinds:
-  - RSS
+    - RSS
 
 permalinks:
-  blog: /blog/:year/:month/:slug/
+    blog: /blog/:year/:month/:slug/
