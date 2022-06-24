@@ -1,5 +1,5 @@
 👋 Nice to meet you!
 
-I'm a backend software engineer based in the Portland, Oregon area of the United States. I've been working in the industry for about five years now, primarily focused on building scalable, REST-based microservices using languages like `Java`, `JavaScript`/`TypeScript`, and `Go`.
+I'm a backend software engineer based near Boise, Idaho in the United States. I've been working in the industry for about six years now, primarily focused on building scalable, REST-based microservices using languages like `Go`, `Java`, and `JavaScript`/`TypeScript`.
 
-I enjoy [building stuff](https://github.com/jaredpetersen "GitHub") in my free time as well. Sometimes I write about it on my [blog](/blog "Blog").
+I enjoy [building stuff](https://github.com/jaredpetersen "GitHub") in my free time. Sometimes I write about it on my [blog](/blog "Blog").
