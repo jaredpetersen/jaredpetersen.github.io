@@ -14,8 +14,6 @@ params:
     social:
         - type: GitHub
           url: https://github.com/jaredpetersen
-        - type: StackOverflow
-          url: https://stackoverflow.com/users/7583677/jared-petersen
         - type: LinkedIn
           url: https://www.linkedin.com/in/petersenjared
         - type: Instagram
