@@ -1,11 +1,11 @@
-baseURL: https://jaredpetersen.github.io
+baseURL: https://jaredpetersen.com
 languageCode: en-us
 title: Jared Petersen
 theme: jaredpetersen
-copyright: 2021 Jared Petersen. All rights reserved.
+copyright: "{year} Jared Petersen. All rights reserved."
 
 params:
-    description: Personal website and blog for Jared Petersen covering a range of software engineering topics
+    description: Personal website and blog for Jared Petersen, covering a range of software engineering topics
     emoji: 🚜
 
     images:
