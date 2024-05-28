@@ -18,8 +18,6 @@ params:
           url: https://www.linkedin.com/in/petersenjared
         - type: Instagram
           url: https://instagram.com/jaredtpetersen
-        - type: Twitter
-          url: https://twitter.com/jaredtpetersen
         - type: Email
           url: mailto:jaredtoddpetersen@gmail.com
 
